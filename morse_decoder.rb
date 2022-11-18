@@ -46,6 +46,6 @@ def decode_message(message)
   @message_arr.each do |word|
     @current_message += "#{decode_word(word)} "
   end
-  print @current_message.strip
+  @current_message.strip
 end
 decode_message('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
