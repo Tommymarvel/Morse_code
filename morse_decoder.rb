@@ -27,25 +27,25 @@
   '--..' => 'Z'
 }
 
-def decode_char (letter)
-     @dictionary[letter]
+def decode_char(letter)
+  @dictionary[letter]
 end
 
-def decode_word (word)
-    @arr = word.split
-    @current_letter = ''
-    @arr.each do | letter | 
-        @current_letter += decode_char(letter)
-    end
- @current_letter 
+def decode_word(word)
+  @arr = word.split
+  @current_letter = ''
+  @arr.each do |letter|
+    @current_letter += decode_char(letter)
+  end
+  @current_letter
 end
 
-def decode_message (message)
-    @message_arr = message.split('   ')
-    @current_message = ''
-    @message_arr.each do | word |
-        @current_message += "#{decode_word(word)} "
-    end
-    print @current_message.strip
+def decode_message(message)
+  @message_arr = message.split('   ')
+  @current_message = ''
+  @message_arr.each do |word|
+    @current_message += "#{decode_word(word)} "
+  end
+  print @current_message.strip
 end
-decode_message("      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+decode_message('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
